@@ -1,0 +1,72 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+      font-weight: 900;
+      text-decoration: none;
+      font-size: 3rem;
+      @media screen and (max-width: 900px){
+          font-size: 2rem;
+      }
+  }
+  .search {
+      width: 80%;
+      display: flex;
+      position: relative;
+      margin-left: 20px;
+      input {
+          background-color: $inputcolor;
+          box-shadow: $boxshadow;
+          font-size: 2rem;
+          border: none;
+          padding: 30px 80px;
+          height: 76px;
+          width: 100%;
+          border-radius: 10px;
+          background-image: url(https://img.icons8.com/material-outlined/80/ffffff/search.png);
+          background-repeat: no-repeat;
+          background-size: 50px;
+          background-position: 20px 15px;
+          text-transform: capitalize;
+          &::placeholder {
+              font-size: 1.2rem;
+              color: #fff;
+              position: relative;
+              top: -2px;
+              @media screen and (max-width: 900px){
+                  font-size: 1rem;
+              }
+          }
+          &:focus::placeholder {
+              opacity: 0;
+          }
+          @media screen and (max-width: 900px){
+              font-size: 1.2rem;
+              background-size: 30px;
+              padding: 20px 60px;
+              height: 50px;
+              background-position: 20px 12px;
+          }
+      }
+      .suggestion {
+          position: absolute;
+          top: 76px;
+          width: 100%;
+          border-radius: 10px;
+          background-color: $inputcolor;
+              li {
+                  list-style-type: none;
+                  font-size: 1.2rem;
+                  padding: 20px 20px;
+                  cursor: pointer;
+                  text-transform: capitalize;
+                  &:hover {
+                      border-radius: 10px;
+                      background-color: $suggestioncolorhover;
+                      box-shadow: $boxshadow;
+                  }
+              }
+      }
+  }
+}

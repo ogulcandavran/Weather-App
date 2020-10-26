@@ -1,0 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+}
+html {
+    font-size: 18px;
+    @media screen and(min-width:1400px){
+    font-size: 20px;
+    }
+}

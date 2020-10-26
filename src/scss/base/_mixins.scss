@@ -1,0 +1,8 @@
+@mixin smooth-up {
+  transform: translateY(-20px);
+  transition: transform 330ms ease-in-out;
+}
+@mixin smooth-big {
+  transform: scale(1.2);
+  transition: transform 330ms ease-in-out;
+}
